@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>justdev-chris — Tools & Projects</title>
+  <style>
+    :root {
+      --accent: #00ffee;
+      --bg: #0f0f0f;
+      --card-bg: #181818;
+      --text: #f0f0f0;
+      --font: 'Courier New', Courier, monospace;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pfp {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px #00ffee88;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      margin-top: 0;
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .project {
+      background: var(--card-bg);
+      border: 1px solid var(--accent);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 0 10px #00ffee33;
+    }
+
+    .project h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: var(--accent);
+    }
+
+    .project a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    .instructions {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .audio-wrapper {
+      margin-top: 2rem;
+    }
+
+    audio {
+      width: 250px;
+      outline: none;
+      filter: drop-shadow(0 0 4px var(--accent));
+    }
+  </style>
+</head>
+<body>
+  <img src="assets/pfp.png" alt="Profile Picture" class="pfp" />
+  <h1>justdev-chris</h1>
+  <p class="subtitle">tiny dev making cool tools for a big internet 🛠️</p>
+
+  <div class="project">
+    <h2>🔍 MetaLens</h2>
+    <p>Inspect and optionally strip image metadata (EXIF) all in-browser.</p>
+    <p><a href="MetaLens/index.html" target="_blank">Launch MetaLens</a></p>
+  </div>
+
+  <div class="project">
+    <h2>🎨 Image 2 ASCII (Python)</h2>
+    <p>Generate ASCII art from images using detailed Braille characters.</p>
+    <div class="instructions">
+      <strong>How to use:</strong><br />
+      1. Install Pillow → <code>pip install pillow</code><br />
+      2. Put your image as <code>bk6.png</code><br />
+      3. Run <code>python main.py</code><br />
+      4. View result in <code>output.txt</code>
+    </div>
+  </div>
+
+  <div class="project">
+    <h2>📦 More projects coming soon...</h2>
+    <p>Stay tuned! This page will grow with tools, games, and more 🤍</p>
+  </div>
+
+  <div class="audio-wrapper">
+    <audio controls loop>
+      <source src="https://doxbin.com/static/track.mp3" type="audio/mpeg" />
+      Your browser doesn't support background music 😿
+    </audio>
+  </div>
+
+  <footer>© 2025 justdev-chris — powered by open source</footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

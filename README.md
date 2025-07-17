@@ -16,7 +16,7 @@ Upload an image to view all of its hidden EXIF data — such as camera make, tim
 - Outputs tag data in a readable JSON format
 - Fully private, runs locally
 
-### Demo
+### Live Version
 [🔗 Open MetaLens](https://justdev-chris.github.io/random-stuff/MetaLens/)
 
 ---
@@ -37,8 +37,9 @@ Give it any image, and it'll turn it into a beautiful (or cursed) wall of charac
 
 ```bash
 python image2ascii.py path/to/image.jpg
-Optional arguments can be added for output width, contrast, and character sets depending on your version.
 ```
+Optional arguments can be added for output width, contrast, and character sets depending on your version.
+
 📁 Repo Structure
 ```
 /

@@ -84,14 +84,8 @@
       color: #666;
     }
 
-    .audio-wrapper {
-      margin-top: 2rem;
-    }
-
     audio {
-      width: 250px;
-      outline: none;
-      filter: drop-shadow(0 0 4px var(--accent));
+      display: none;
     }
   </style>
 </head>
@@ -112,9 +106,10 @@
     <div class="instructions">
       <strong>How to use:</strong><br />
       1. Install Pillow → <code>pip install pillow</code><br />
-      2. Put your image in the python code as <code>yourimage.png</code><br />
+      2. Open <code>main.py</code> and change the <code>image_path</code> variable to your image file<br />
       3. Run <code>python main.py</code><br />
-      4. View result in <code>output.txt</code>
+      4. View the result in <code>output.txt</code><br />
+      5. Use in websites, copy to terminal, or share it!
     </div>
   </div>
 
@@ -123,14 +118,12 @@
     <p>Stay tuned! This page will grow with tools, games, and more 🤍</p>
   </div>
 
-  <div class="audio-wrapper">
-    <audio controls loop>
-      <source src="https://doxbin.com/static/track.mp3" type="audio/mpeg" />
-      Your browser doesn't support background music 😿
-    </audio>
-  </div>
-
   <footer>© 2025 justdev-chris — powered by open source</footer>
+
+  <audio autoplay loop>
+    <source src="https://doxbin.com/static/track.mp3" type="audio/mpeg" />
+    Your browser doesn't support background music 😿
+  </audio>
 
   <script src="main.js"></script>
 </body>

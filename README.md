@@ -34,10 +34,7 @@ Give it any image, and it'll turn it into a beautiful (or cursed) wall of charac
 - Outputs to console or file
 
 ### Usage
-
-```bash
-python image2ascii.py path/to/image.jpg
-```
+Change the input image in the python code to your image path. An output txt will come out containing the ASCII.
 Optional arguments can be added for output width, contrast, and character sets depending on your version.
 
 📁 Repo Structure

@@ -54,9 +54,10 @@ Use, copy, modify, remix, or include these tools in your own projects
 Share them freely, make changes, go wild~
 
 Just please keep credit to the original creator (justdev-chris) somewhere in your version.
-No need to ask permission — just don’t remove the name 💖
+No need to ask permission — just don’t remove the name.
 
-Made with cozy vibes and a bit of chaos ✨
+Made with chaos 😭 (I made these around 3am okay??)
+
 By justdev-chris
 
 ```

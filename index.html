@@ -83,10 +83,6 @@
       font-size: 0.85rem;
       color: #666;
     }
-
-    audio {
-      display: none;
-    }
   </style>
 </head>
 <body>
@@ -106,10 +102,9 @@
     <div class="instructions">
       <strong>How to use:</strong><br />
       1. Install Pillow → <code>pip install pillow</code><br />
-      2. Open <code>main.py</code> and change the <code>image_path</code> variable to your image file<br />
+      2. Put your image in the python code as <code>yourimage.png</code><br />
       3. Run <code>python main.py</code><br />
-      4. View the result in <code>output.txt</code><br />
-      5. Use in websites, copy to terminal, or share it!
+      4. View result in <code>output.txt</code>
     </div>
   </div>
 
@@ -118,13 +113,25 @@
     <p>Stay tuned! This page will grow with tools, games, and more 🤍</p>
   </div>
 
-  <footer>© 2025 justdev-chris — powered by open source</footer>
+  <!-- ig sum autoplay shi-->
+  <audio id="bg-music" src="track.mp3" loop></audio>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const music = document.getElementById("bg-music");
 
-  <audio autoplay loop>
-    <source src="assets/track.mp3" type="audio/mpeg" />
-    Your browser doesn't support background music 😿
-  </audio>
+      // a dis script play da music on clickity click
+      const unlockAudio = () => {
+        music.play().catch(err => console.log("Autoplay blocked:", err));
+        document.removeEventListener("click", unlockAudio);
+      };
+
+      document.addEventListener("click", unlockAudio);
+    });
+  </script>
+
+  <footer>© 2025 justdev-chris — powered by open source</footer>
 
   <script src="main.js"></script>
 </body>
 </html>
+

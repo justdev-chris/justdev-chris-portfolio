@@ -123,10 +123,31 @@
       text-decoration: underline;
     }
 
+    .socials {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .socials a {
+      color: var(--accent);
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .socials a:hover {
+      text-decoration: underline;
+      color: #66ffee;
+    }
+
     footer {
       margin-top: 4rem;
       font-size: 0.85rem;
       color: #666;
+      text-align: center;
     }
 
     audio {
@@ -147,6 +168,14 @@
     <img src="assets/pfp.png" alt="Profile Picture" class="pfp" />
     <h1>justdev-chris</h1>
     <p class="subtitle">tiny dev making cool tools for a big internet 🛠️</p>
+
+    <div class="socials">
+      <a href="https://discord.com/users/dextersquirrel" target="_blank">Discord: dextersquirrel</a>
+      <a href="https://github.com/justdev-chris" target="_blank">GitHub</a>
+      <a href="https://justdev-chris.itch.io/" target="_blank">Itch.io</a>
+      <a href="https://open.spotify.com/artist/1PUp9Gx2NdVOFoFhEf1uEX" target="_blank">Spotify: ItzChris</a>
+      <a href="https://www.tiktok.com/@chris_230" target="_blank">TikTok: chris_230</a>
+    </div>
 
     <div class="project">
       <h2>🔍 MetaLens</h2>
@@ -186,28 +215,24 @@
 
     <div class="project">
       <h2>🍪 Corrupt Cookies</h2>
-      <p>A js which allows to corrupt the cookies of any site. Helps bypass filters.</p>
+      <p>A JS tool that lets you mess with cookies to bypass filters.</p>
       <p><a href="https://justdev-chris.github.io/Corrupt-Cookies/" target="_blank">Launch Corrupt Cookies</a></p>
     </div>
 
     <div class="project">
       <h2>🤖 Mochi AI</h2>
-      <p>Mochi is an AI assistant, built for discord. An AI discord bot.</p>
+      <p>A Discord bot powered by AI. Made with Python and lots of love.</p>
       <div class="instructions">
         <strong>How to use:</strong><br />
-        1. Install Python 3.10 or later discord.py aiohttp requests python-dotenv<br /> 
-        or you can install all required packages using: pip install -r requirements.txt<br />
-        1.5. Download the ZIP from the repo: https://github.com/justdev-chris/Mochi-AI-DISCORD/<br />
-        Extract it anywhere you want, Open terminal inside the extracted folder<br />
-        Run: pip install -r requirements.txt<br />
-        2. Create a .env file in the project root directory with the following content:<br />
-        DISCORD_TOKEN=your_discord_bot_token_here CHAT_API=your_openrouter_api_key_here<br />
-        Replace your_discord_bot_token_here with your Discord Bot token (from Discord Developer Portal).<br />
-        Replace your_openrouter_api_key_here with your OpenRouter API key (get one free at https://openrouter.ai).<br />
+        1. Install Python 3.10+ with:<br />
+        <code>pip install -r requirements.txt</code><br />
+        2. Create a <code>.env</code> file:<br />
+        <code>DISCORD_TOKEN=your_token<br />
+        CHAT_API=your_openrouter_key</code><br />
         3. Run <code>python main.py</code>
       </div>
     </div>
-    
+
     <div class="project">
       <h2>📦 More projects coming soon...</h2>
       <p>Stay tuned! This page will grow with tools, games, and more 🤍</p>
@@ -218,7 +243,15 @@
       Your browser doesn’t support music playback 😿
     </audio>
 
-    <footer>© 2025 justdev-chris — powered by open source</footer>
+    <footer>
+      © 2025 justdev-chris — powered by open source<br />
+      <script type="text/javascript" src="https://www.stat-counter.org/count/i8xd"></script><br />
+      <a href="https://www.acadoo.de/leistungen/ghostwriter-doktorarbeit/" target="_blank" rel="noopener noreferrer">
+        Diss Ghostwriting
+      </a><br />
+      <script type="text/javascript" src="https://www.whomania.com/ctr?id=b0e2e69dfee6a4b280dfe9ec503b76e32ca7c498"></script>
+    </footer>
+  </main>
 
   <script src="main.js"></script>
   <script>
@@ -230,11 +263,8 @@
     enterBtn.onclick = () => {
       enterScreen.style.display = "none";
       mainContent.style.display = "flex";
-      music.play().catch(() => {}); // try play just in case autoplay fails
+      music.play().catch(() => {});
     };
   </script>
 </body>
 </html>
-
-
-

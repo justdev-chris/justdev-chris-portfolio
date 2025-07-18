@@ -12,9 +12,8 @@ window.onload = () => {
   const codingStatus = document.getElementById("coding-status");
 
   const devMessages = [
-    "Welcome to justdev-chris tools",
-    "justdev-chris — Tools & Projects",
-    "chris is now online",
+    "Welcome to justdev-chris tools!",
+    "justdev-chris",
   ];
 
   let i = 0, j = 0, currentText = "", isDeleting = false;
@@ -77,7 +76,7 @@ window.onload = () => {
     });
   });
 
-  const codingList = ["TransferNest", "UCC: Story 2", "MetaLens", "New Tool"];
+  const codingList = [ "a new tool rn"];
   let codingIndex = 0;
   setInterval(() => {
     codingStatus.innerText = codingList[codingIndex];

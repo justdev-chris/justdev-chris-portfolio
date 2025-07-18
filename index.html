@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>justdev-chris — Tools & Projects</title>
+  <link rel="icon" type="image/png" href="assets/pfp.png" />
   <style>
     :root {
       --accent: #00ffee;
@@ -113,19 +114,12 @@
     <p>Stay tuned! This page will grow with tools, games, and more 🤍</p>
   </div>
 
-  <!-- ig sum autoplay shi-->
+  <!-- audio (must click to start) -->
   <audio id="bg-music" src="assets/track.mp3" loop></audio>
   <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const music = document.getElementById("bg-music");
-
-      // a dis script play da music on clickity click
-      const unlockAudio = () => {
-        music.play().catch(err => console.log("Autoplay blocked:", err));
-        document.removeEventListener("click", unlockAudio);
-      };
-
-      document.addEventListener("click", unlockAudio);
+    const music = document.getElementById("bg-music");
+    document.addEventListener("click", () => {
+      music.play().catch(e => console.log("Autoplay blocked", e));
     });
   </script>
 
@@ -134,4 +128,5 @@
   <script src="main.js"></script>
 </body>
 </html>
+
 

@@ -42,7 +42,7 @@ i like femboys and i cannot lie, why u checking console or in devtools huh? (or 
 |  $$$$$$/                                                                                                                
  \______/                  
                                                   site by justdev-chris
-                                                https://github.com/justdev-chris`;
+                                            https://github.com/justdev-chris`;
   
       console.log(omgMYLOGOhappi);
 };

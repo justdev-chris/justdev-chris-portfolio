@@ -4,34 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>EXIF Info Viewer 🐱🔍</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f9faff;
-    color: #222;
-    max-width: 500px;
-    margin: 2rem auto;
-    padding: 1rem;
-    text-align: center;
-  }
-  input[type="file"] {
-    margin-bottom: 1rem;
-  }
-  pre {
-    text-align: left;
-    background: #e0e7ff;
-    padding: 1rem;
-    border-radius: 12px;
-    overflow-x: auto;
-    max-height: 300px;
-  }
-  img {
-    max-width: 100%;
-    margin-top: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #aabfff;
-  }
-</style>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <h1>EXIF Info Viewer 🐾</h1>
@@ -40,31 +13,7 @@
   <img id="preview" alt="" style="display:none;" />
   
   <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
-  <script>
-    const fileInput = document.getElementById('fileInput');
-    const exifOutput = document.getElementById('exifOutput');
-    const preview = document.getElementById('preview');
-    
-    fileInput.addEventListener('change', () => {
-      const file = fileInput.files[0];
-      if (!file) return;
-      
-      const reader = new FileReader();
-      reader.onload = function(event) {
-        preview.src = event.target.result;
-        preview.style.display = 'block';
-        
-        EXIF.getData(file, function() {
-          const allTags = EXIF.getAllTags(this);
-          if (Object.keys(allTags).length === 0) {
-            exifOutput.textContent = 'No EXIF metadata found in this image, cutie~ 😿';
-          } else {
-            exifOutput.textContent = JSON.stringify(allTags, null, 2);
-          }
-        });
-      };
-      reader.readAsDataURL(file);
-    });
-  </script>
+  <script src="main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

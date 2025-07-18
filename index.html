@@ -20,6 +20,21 @@
       background: var(--bg);
       color: var(--text);
       font-family: var(--font);
+      background-image: url("assets/bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
     }
 
     #enter-screen {
@@ -275,3 +290,4 @@
   </script>
 </body>
 </html>
+

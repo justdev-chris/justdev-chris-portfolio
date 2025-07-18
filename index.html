@@ -4,25 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>justdev-chris — Tools & Projects</title>
-  <link rel="icon" type="image/png" href="assets/pfp.png" />
+  <link rel="icon" href="assets/pfp.png" />
   <style>
     :root {
       --accent: #00ffee;
-      --bg: #0f0f0f;
-      --card-bg: #181818;
-      --text: #f0f0f0;
+      --bg: #0a0a0a;
+      --card-bg: #161616;
+      --text: #f8f8f8;
       --font: 'Courier New', Courier, monospace;
     }
 
-    body {
+    html, body {
       margin: 0;
-      padding: 2rem;
+      padding: 0;
       background: var(--bg);
       color: var(--text);
       font-family: var(--font);
+    }
+
+    #enter-screen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      color: var(--accent);
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 9999;
+    }
+
+    #enter-screen h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #enter-screen p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #aaa;
+    }
+
+    #enter-btn {
+      background: var(--accent);
+      border: none;
+      color: #000;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    #enter-btn:hover {
+      background: #00bbcc;
+    }
+
+    main {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
     }
 
     .pfp {
@@ -31,20 +76,20 @@
       border-radius: 50%;
       border: 3px solid var(--accent);
       object-fit: cover;
+      box-shadow: 0 0 10px #00ffee99;
       margin-bottom: 1rem;
-      box-shadow: 0 0 10px #00ffee88;
     }
 
     h1 {
       font-size: 2.5rem;
       color: var(--accent);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
 
-    p.subtitle {
-      margin-top: 0;
-      color: #ccc;
+    .subtitle {
       font-size: 1rem;
+      color: #bbb;
+      margin-bottom: 2rem;
     }
 
     .project {
@@ -60,8 +105,13 @@
 
     .project h2 {
       margin-top: 0;
-      font-size: 1.4rem;
       color: var(--accent);
+    }
+
+    .project p,
+    .project a {
+      font-size: 0.95rem;
+      color: var(--text);
     }
 
     .project a {
@@ -73,60 +123,88 @@
       text-decoration: underline;
     }
 
-    .instructions {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-      color: #bbb;
-    }
-
     footer {
       margin-top: 4rem;
       font-size: 0.85rem;
       color: #666;
     }
+
+    audio {
+      margin-top: 2rem;
+      width: 250px;
+      filter: drop-shadow(0 0 4px var(--accent));
+    }
   </style>
 </head>
 <body>
-  <img src="assets/pfp.png" alt="Profile Picture" class="pfp" />
-  <h1>justdev-chris</h1>
-  <p class="subtitle">tiny dev making cool tools for a big internet 🛠️</p>
-
-  <div class="project">
-    <h2>🔍 MetaLens</h2>
-    <p>Inspect image metadata (EXIF) all in-browser.</p>
-    <p><a href="MetaLens/index.html" target="_blank">Launch MetaLens</a></p>
+  <div id="enter-screen">
+    <h1>Welcome to justdev-chris’s Tools!</h1>
+    <p>⚠️ This site contains auto-playing music. Click to enter.</p>
+    <button id="enter-btn">Enter</button>
   </div>
 
-  <div class="project">
-    <h2>🎨 Image 2 ASCII (Python)</h2>
-    <p>Generate ASCII art from images using detailed Braille characters.</p>
-    <div class="instructions">
-      <strong>How to use:</strong><br />
-      1. Install Pillow → <code>pip install pillow</code><br />
-      2. Put your image in the python code as <code>yourimage.png</code><br />
-      3. Run <code>python main.py</code><br />
-      4. View result in <code>output.txt</code>
+  <main>
+    <img src="assets/pfp.png" alt="Profile Picture" class="pfp" />
+    <h1>justdev-chris</h1>
+    <p class="subtitle">tiny dev making cool tools for a big internet 🛠️</p>
+
+    <div class="project">
+      <h2>🔍 MetaLens</h2>
+      <p>Inspect image metadata (EXIF) all in-browser.</p>
+      <p><a href="MetaLens/index.html" target="_blank">Launch MetaLens</a></p>
     </div>
-  </div>
 
-  <div class="project">
-    <h2>📦 More projects coming soon...</h2>
-    <p>Stay tuned! This page will grow with tools, games, and more 🤍</p>
-  </div>
+    <div class="project">
+      <h2>🎨 Image 2 ASCII (Python)</h2>
+      <p>Generate ASCII art from images using detailed Braille characters.</p>
+      <div class="instructions">
+        <strong>How to use:</strong><br />
+        1. Install Pillow → <code>pip install pillow</code><br />
+        2. Put your image path in <code>main.py</code><br />
+        3. Run <code>python main.py</code><br />
+        4. View output in <code>output.txt</code>
+      </div>
+    </div>
 
-  <!-- audio (must click to start) -->
-  <audio id="bg-music" src="assets/track.mp3" loop></audio>
-  <script>
-    const music = document.getElementById("bg-music");
-    document.addEventListener("click", () => {
-      music.play().catch(e => console.log("Autoplay blocked", e));
-    });
-  </script>
+    <div class="project">
+      <h2>🐟 Ultimate Cat Clicker (Fish Edition)</h2>
+      <p>Idle clicker where you collect fish and unlock cat lore. Built in HTML5.</p>
+      <p><a href="https://justdev-chris.itch.io/ucc-html5" target="_blank">Play on Itch.io</a></p>
+    </div>
 
-  <footer>© 2025 justdev-chris — powered by open source</footer>
+    <div class="project">
+      <h2>📁 TransferNest</h2>
+      <p>In-browser file drop + share tool with history, stats, and glowing UI.</p>
+      <p><a href="TransferNest/index.html" target="_blank">Launch TransferNest</a></p>
+    </div>
+
+    <div class="project">
+      <h2>📦 More projects coming soon...</h2>
+      <p>Stay tuned! This page will grow with tools, games, and more 🤍</p>
+    </div>
+
+    <audio id="bg-music" autoplay loop>
+      <source src="track.mp3" type="audio/mpeg" />
+      Your browser doesn’t support music playback 😿
+    </audio>
+
+    <footer>© 2025 justdev-chris — powered by open source</footer>
 
   <script src="main.js"></script>
+  <script>
+    const enterBtn = document.getElementById("enter-btn");
+    const enterScreen = document.getElementById("enter-screen");
+    const mainContent = document.querySelector("main");
+    const music = document.getElementById("bg-music");
+
+    enterBtn.onclick = () => {
+      enterScreen.style.display = "none";
+      mainContent.style.display = "flex";
+      music.play().catch(() => {}); // try play just in case autoplay fails
+    };
+  </script>
 </body>
 </html>
+
 
 

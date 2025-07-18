@@ -1,3 +1,9 @@
+# 🐱 Portfolio 
+
+A portfolio I created filled with projects I made.
+
+---
+
 # 🧰 Tools
 
 A collection of useful tools created by [justdev-chris](https://github.com/justdev-chris) 
@@ -17,7 +23,7 @@ Upload an image to view all of its hidden EXIF data — such as camera make, tim
 - Fully private, runs locally
 
 ### Live Version
-[🔗 Open MetaLens](https://justdev-chris.github.io/random-stuff/MetaLens/)
+[🔗 Open MetaLens](https://justdev-chris.github.io/justdev-chris-portfolio/MetaLens)
 
 ---
 
@@ -42,8 +48,8 @@ Optional arguments can be added for output width, contrast, and character sets d
 /
 ├── MetaLens/         # Browser-based EXIF viewer
 │   └── index.html
-├── Image2ASCII/      # Python ASCII art tool
-│   └── image2ascii.py
+├── Image 2 ASCII/      # Python ASCII art tool
+│   └── main.py
 └── README.md
 ```
 # @🧸 License (by justdev-chris)
@@ -59,6 +65,8 @@ No need to ask permission — just don’t remove the name.
 Made with chaos 😭 (I made these around 3am okay??)
 
 By justdev-chris
+
+stuff i made with my Image 2 ASCII tool... ⬇️
 
 ```
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

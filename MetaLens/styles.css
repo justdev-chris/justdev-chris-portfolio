@@ -1,0 +1,26 @@
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9faff;
+    color: #222;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  input[type="file"] {
+    margin-bottom: 1rem;
+  }
+  pre {
+    text-align: left;
+    background: #e0e7ff;
+    padding: 1rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    max-height: 300px;
+  }
+  img {
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #aabfff;
+  }
